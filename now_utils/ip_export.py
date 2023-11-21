@@ -96,6 +96,12 @@ def main():
         if len(pos_files) == 1:
             print(f'  - Using {pos_files[0]}')
             vhdl_src = pos_files[0]
+        elif len(pos_files) == 0:
+            print(f'  - No files matched.  Run in directory where:')
+            print(f'    - NiFpgaIPWrapper_???.vhd')
+            print(f'    - NiFpgaAG_???.dcp')
+            print(f'    (Check C:\\NIFPGA\\compilation)')
+            sys.exit(1)
         else:
             print(f'  - More than one file matched, please run again with')
             print(f'    the -s/--source <vhdl file> parameter.')
