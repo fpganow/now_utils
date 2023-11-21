@@ -1,0 +1,4 @@
+black
+PyHamcrest>=2.0.4
+pylint
+pytest>=7.1.3
